@@ -1,0 +1,30 @@
+[
+  {
+    "TargetURL" : "http://searchservice:8080",
+    "Prefix": "/search",
+    "StripPrefix": false,
+    "Name" : "text query service",
+    "Auth" : true,
+    "RateLimitPerSecond": 4,
+    "Gzip": true,
+    "CORS" : {
+      "AllowedOrigins" : ["*.blabla.nl"],
+      "AllowCredentials" : true,
+      "AllowedHeaders": ["Authorization", "Content-Type"]
+    }
+  },
+    {
+    "TargetURL" : "http://searchservice:8080",
+    "Prefix": "/aggregate",
+    "StripPrefix": false,
+    "Name" : "aggregate service",
+    "Auth" : true,
+    "RateLimitPerSecond": 4,
+    "Gzip": true,
+    "CORS" : {
+      "AllowedOrigins" : ["*.blabla.nl"],
+      "AllowCredentials" : true,
+      "AllowedHeaders": ["Authorization", "Content-Type"]
+    }
+  }
+]
