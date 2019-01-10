@@ -44,7 +44,7 @@ TLS_CLIENT_CA="..." # path to client CA e.g. CloudFlare's origin-pull-ca.pem
 
 Endpoints are configured using an array of JSON objects.
 
-```json
+```json5
 [
   {
     "TargetURL" : "http://searchservice:8080",
@@ -52,7 +52,7 @@ Endpoints are configured using an array of JSON objects.
     "StripPrefix": false,
     "Name" : "text query service",
     "Auth" : true, # whether to enable Auth0
-    "RateLimitPerSecond": 4, # can be a float
+    "RateLimitPerSecond": 0.5, # Supports floats. This case: 1 request each 2 seconds
     "Gzip": true,
     "CORS" : {
       "AllowedOrigins" : ["*.blabla.com"],
