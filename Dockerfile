@@ -1,5 +1,5 @@
 ####--- build stage
-FROM golang:1.11.4 AS build-env
+FROM golang:latest AS build-env
 
 WORKDIR building
 
